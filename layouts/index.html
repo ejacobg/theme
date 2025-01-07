@@ -7,7 +7,7 @@
     <div>
         <h2>Recent Additions</h2>
         <ul>
-            <!-- See config.toml for the main sections. -->
+            <!-- See hugo.toml for the main sections. -->
             {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections).ByDate.Reverse }}
             <li>
                 <a href="{{.Page.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Page.Title}}</a>
